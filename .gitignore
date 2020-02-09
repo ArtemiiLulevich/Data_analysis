@@ -18,3 +18,4 @@ Blog/db.sqlite3
 media
 
 #
+*.svg
