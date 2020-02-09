@@ -1,6 +1,14 @@
 from random import choice
 
 
+def get_step():
+
+    direction = choice([1, -1])
+    distance = choice([0, 1, 2, 3, 4])
+
+    return direction * distance
+
+
 class RandomWalk:
 
     def __init__(self, num_points=5000):
@@ -14,13 +22,8 @@ class RandomWalk:
         """Calculates all points of the walk"""
 
         while len(self.x_values) < self.num_points:
-            x_direction = choice([1, -1])
-            x_distance = choice([0, 1, 2, 3, 4])
-            x_step = x_direction * x_distance
-
-            y_direction = choice([1, -1])
-            y_distance = choice([0, 1, 2, 3, 4])
-            y_step = y_direction * y_distance
+            x_step = get_step()
+            y_step = get_step()
 
             if x_step == 0 and y_step == 0:
                 continue
