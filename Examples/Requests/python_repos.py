@@ -2,7 +2,7 @@ import requests
 import pygal
 from pygal.style import LightColorizedStyle as LCS, LightenStyle as LS
 
-url = 'https://api.github.com/search/repositories?q=language:python&sort=stars'
+url = 'https://api.github.com/search/repositories?q=language:C&sort=stars'
 
 r = requests.get(url)
 print("Status code: ", r.status_code)
